@@ -51,6 +51,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                     </div>
                     <div className="cart-total">
                             <p>Total: ${totalPrice.toFixed(2)}</p>
+                            <button>Confirm Purchase</button>
                     </div>
                 </>
             )}

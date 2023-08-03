@@ -4,33 +4,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comfortaa';
 }
+
+/* Navbar section */
 
 nav {
     display: flex;
     justify-content: flex-end;
-    padding: 1em;
-    background-color: #b9b9b9;
+    padding: 1.5em;
+    background-color: #783186;
     top: 0;
     width: 100%;
 }
 
 nav > a {
     padding: 0 1.5em;
+    text-decoration: none;
+    color: white;
+    margin-right: 1em;
+    align-items: center;
+}
+
+nav > a:hover {
+    transform: scale(115%);
+    transition: transform 0.3s;
 }
 
 .cart-count {
     position: absolute;
-    top: 0.5em;
-    right: 1em;
+    top: 1em;
+    right: 2.4em;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 1em;
-    height: 1em;
-    background-color: #17721b;
+    align-items: flex-end;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #ca6a1c;
     color: #ffffff;
     border-radius: 50%;
+    color: white;
+    font-weight: bold;
 }
 
 /* Home section */
@@ -62,10 +76,32 @@ nav > a {
     padding: 5em;
 }
 
+.shop-button-container button {
+    background-color: rgb(42, 133, 19);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 0.8em;
+    font-size: 14px;
+}
+
+.shop-button-container button:hover {
+    cursor: pointer;
+    transform: scale(115%);
+    transition: transform 0.3s;
+}
+
+.shop-button-container button:active {
+    background-color: rgb(25, 77, 12);
+    transition-duration: 0.3s;
+}
+
 /* Products section */
 
 .products-container h2 {
     padding: 1em;
+    text-align: center;
 }
 
 .products-grid {
@@ -78,7 +114,7 @@ nav > a {
 
 .product {
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 9px;
     text-align: center;
     padding: 1em;
 }
@@ -101,6 +137,28 @@ nav > a {
 .product p {
     font-size: 0.9em;
     padding: 0.5em;
+}
+
+.product button {
+    background-color: rgb(41, 165, 214);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 0.8em;
+    font-size: 14px;
+}
+
+.product button:hover {
+    color: black;
+    cursor: pointer;
+    transform: scale(105%);
+    transition: transform 0.3s;
+}
+
+.product button:active {
+    background-color: rgb(29, 128, 167);
+    transition-duration: 0.3s;
 }
 
 /* Cart section */

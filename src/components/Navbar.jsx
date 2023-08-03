@@ -17,8 +17,8 @@ const Navbar = ({ cartItems }) => {
                 <Link to="/products">Products</Link>
                 <Link to="/cart">
                     <Icon path={mdiCart} size={1} />
-                    {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
                 </Link>
+                {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
             </nav>
             <div>
                 <Outlet />

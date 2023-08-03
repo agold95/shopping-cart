@@ -13,11 +13,7 @@ const Products = ({ addToCart }) => {
                     throw new Error("Error fetching products");
                 }
                 const data = await response.json();
-                const items = data.filter((product) => 
-                    product.category === "men's clothing" ||
-                    product.category === "women's clothing"
-                );
-                const itemQuantity = items.map((product) => (
+                const itemQuantity = data.map((product) => (
                     { ...product, quantity: 1 }
                 ));
                 setItems(itemQuantity);

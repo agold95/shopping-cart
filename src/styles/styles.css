@@ -10,15 +10,20 @@
 /* Navbar section */
 
 nav {
-    display: flex;
-    justify-content: flex-end;
     padding: 1.5em;
-    background-color: #783186;
-    top: 0;
+    background-color: #363f96;
     width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav > a {
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links > a {
     padding: 0 1.5em;
     text-decoration: none;
     color: white;
@@ -26,9 +31,13 @@ nav > a {
     align-items: center;
 }
 
-nav > a:hover {
+.nav-links > a:hover {
     transform: scale(115%);
     transition: transform 0.3s;
+}
+
+.nav-title {
+    letter-spacing: 0.7em;
 }
 
 .cart-count {
@@ -70,6 +79,10 @@ nav > a:hover {
 
 .home-content > div {
     width: 30%;
+    padding: 1em;
+    background-color: #6b6b6b;
+    border-radius: 3px;
+    color: white;
 }
 
 .shop-button-container {
@@ -99,6 +112,11 @@ nav > a:hover {
 
 /* Products section */
 
+.loading {
+    text-align: center;
+    padding: 5em;
+}
+
 .products-container h2 {
     padding: 1em;
     text-align: center;
@@ -120,8 +138,8 @@ nav > a:hover {
 }
 
 .product img {
-    max-width: auto;
-    height: 25vh;
+    max-width:50%;
+    height: 50%;
 }
 
 .product h3 {
@@ -167,9 +185,14 @@ nav > a:hover {
     padding: 1em;
 }
 
+.cart-container h2 {
+    text-align: center;
+    padding: 1em;
+}
+
 .cart-items {
     display: grid;
-    grid-template-columns: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 25vw);
     justify-content: center;
     gap: 2em;
     padding: 2em;
@@ -177,21 +200,140 @@ nav > a:hover {
 
 .cart-item {
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
     border: 1px solid black;
+    border-radius: 9px;
 }
 
 .cart-item img {
     max-width: auto;
-    height: 20vh;
+    height: 15vh;
 }
 
 .quantity-button-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 1em;
 }
 
-.quantity-button-container button {
-    padding: 0.7em;
+.quantity-button-container p {
+    font-weight: bold;
+}
+
+.plus-button, .minus-button {
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding: 0.8em;
+}
+
+.plus-button {
+    background-color: rgb(42, 133, 19);
+}
+
+.plus-button:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    transition: transform 0.2s;
+}
+
+.plus-button:active {
+    background-color: rgb(25, 77, 12);
+}
+
+.minus-button {
+    background-color: rgb(128, 128, 128);
+}
+
+.minus-button:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    transition: transform 0.2s;
+}
+
+.minus-button:active {
+    background-color: rgb(85, 85, 85);
+}
+
+.remove-button {
+    background-color: #a33232;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding: 0.6em;
+}
+
+.remove-button:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    transition: transform 0.2s;
+}
+
+.remove-button:active {
+    background-color: #6d2222;
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cart-total div {
+    padding: 1em;
+}
+
+.cart-total p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.confirm-button {
+    background-color: #1eadc0;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding: 1em;
+}
+
+.confirm-button:hover {
+    cursor: pointer;
+    transform: scale(115%);
+    transition: transform 0.2s;
+}
+
+.confirm-button:active {
+    background-color: #13707c;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 3em 0;
+}
+
+/* for medium screens */
+
+@media screen and (max-width: 1130px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 40vw);
+    }    
+}
+
+/* for small screens */
+
+@media screen and (max-width: 600px) {
+    .products-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -29,7 +29,7 @@ const Cart = ({ cartItems, setCartItems }) => {
         <div className="cart-container">
             <h2>Your Cart</h2>
             {cartItems.length === 0 ? (
-                <p>Your cart is empty.</p>
+                <p className="empty-cart">Your cart is empty.</p>
             ) : (
                 <>
                     <div className="cart-items">
@@ -40,18 +40,22 @@ const Cart = ({ cartItems, setCartItems }) => {
                                     <h3>{item.title}</h3>
                                     <p>${item.price}</p>
                                     <div className="quantity-button-container">
-                                        <button onClick={() => decreaseCartQuantity(item.id)}>-</button>
+                                        <button className="minus-button" onClick={() => decreaseCartQuantity(item.id)}>-</button>
                                         <p>{item.quantity}</p>
-                                        <button onClick={() => increaseCartQuantity(item.id)}>+</button>
+                                        <button className="plus-button" onClick={() => increaseCartQuantity(item.id)}>+</button>
                                     </div>
                                 </div>
-                                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                                <button className="remove-button" onClick={() => removeFromCart(item.id)}>Remove</button>
                             </div>
                         ))}
                     </div>
                     <div className="cart-total">
-                            <p>Total: ${totalPrice.toFixed(2)}</p>
-                            <button>Confirm Purchase</button>
+                            <div>
+                                <p>Total: ${totalPrice.toFixed(2)}</p>
+                            </div>
+                            <div>
+                                <button className="confirm-button">Confirm Purchase</button>
+                            </div>
                     </div>
                 </>
             )}

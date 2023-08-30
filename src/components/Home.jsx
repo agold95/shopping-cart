@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ShoppingCart from '../styles/assets/shopping-cart.png';
 
 const Home = () => {
     return (
@@ -8,7 +9,7 @@ const Home = () => {
                 <h3>Everyone needs STUFF</h3>
             </header>
             <div className="cart-image">
-                <img src="src/styles/assets/shopping-cart.png" alt="shopping-cart" />
+                <img src={ShoppingCart} alt="shopping-cart" />
             </div>
             <main className="home-content">
                     <div>

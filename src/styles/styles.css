@@ -62,6 +62,14 @@ nav {
     text-align: center;
 }
 
+.cart-image {
+    padding: 2em
+}
+
+img {
+    width: 20%;
+}
+
 .home-header > h1 {
     padding: 1em;
     font-size: 3em;
@@ -78,11 +86,8 @@ nav {
 }
 
 .home-content > div {
-    width: 30%;
+    width: 35%;
     padding: 1em;
-    background-color: #6b6b6b;
-    border-radius: 3px;
-    color: white;
 }
 
 .shop-button-container {
@@ -206,8 +211,8 @@ nav {
 }
 
 .cart-item img {
-    max-width: auto;
-    height: 15vh;
+    max-width: 50%;
+    height: auto;
 }
 
 .quantity-button-container {

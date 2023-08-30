@@ -24,6 +24,10 @@ const Cart = ({ cartItems, setCartItems }) => {
             )
         );
     };
+
+    const purchaseButton = () => {
+        alert("This will eventually connect to the backend for purchase confirmation");
+    }
     
     return (
         <div className="cart-container">
@@ -54,7 +58,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                                 <p>Total: ${totalPrice.toFixed(2)}</p>
                             </div>
                             <div>
-                                <button className="confirm-button">Confirm Purchase</button>
+                                <button className="confirm-button" onClick={() => purchaseButton()}>Confirm Purchase</button>
                             </div>
                     </div>
                 </>

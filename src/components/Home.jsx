@@ -7,12 +7,15 @@ const Home = () => {
                 <h1>STUFF</h1>
                 <h3>Everyone needs STUFF</h3>
             </header>
+            <div className="cart-image">
+                <img src="src/styles/assets/shopping-cart.png" alt="shopping-cart" />
+            </div>
             <main className="home-content">
                     <div>
-                        <p>Here at STUFF you can find stuff that you don't need for prices way above whatever you're willing to pay for.</p>
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
                     </div>
                     <div>
-                        <p>Check out our shop for products you'll never want or need, all attainable with an easy click of a button.</p>
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></p>
                     </div>
             </main>
             <div className="shop-button-container">
